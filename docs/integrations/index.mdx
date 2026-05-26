@@ -78,7 +78,7 @@ Nextellar integrations are powered by these libraries:
 
 ## Architecture Overview
 
-```
+```text
 
                   Your Application
 
@@ -96,7 +96,7 @@ WalletConnectButton            useStellarWallet
                  Stellar Network
        Horizon API            Soroban RPC
 �
-```
+```typescript
 
 ---
 
@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
     </WalletProvider>
   );
 }
-```
+```text
 
 ### 2. Use Pre-built Components
 
@@ -128,7 +128,7 @@ import WalletConnectButton from '@/components/WalletConnectButton';
 function Header() {
   return <WalletConnectButton />;
 }
-```
+```text
 
 ### 3. Access Wallet State
 
@@ -142,7 +142,7 @@ function Dashboard() {
 
   return <p>Balance: {balances[0]?.balance} XLM</p>;
 }
-```
+```text
 
 ### 4. Interact with Smart Contracts
 
@@ -157,7 +157,7 @@ function TokenBalance({ contractId }) {
     console.log('Token balance:', balance);
   };
 }
-```
+```typescript
 
 ---
 

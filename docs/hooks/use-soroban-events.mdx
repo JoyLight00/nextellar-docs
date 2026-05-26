@@ -39,7 +39,7 @@ export default function EventListener() {
     </div>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -52,7 +52,7 @@ useSorobanEvents(options: {
   sorobanRpc?: string;
   network?: 'TESTNET' | 'PUBLIC';
 }): EventsState
-```
+```css
 
 | Parameter    | Type                    | Default      | Description               |
 | ------------ | ----------------------- | ------------ | ------------------------- |
@@ -71,7 +71,7 @@ interface EventsState {
   startListening: () => void;
   stopListening: () => void;
 }
-```
+```text
 
 ## Examples
 
@@ -82,7 +82,7 @@ const { events } = useSorobanEvents({
   contractId,
   eventTypes: ['transfer'], // Only listen for transfers
 });
-```
+```text
 
 ### React to Events
 
@@ -100,7 +100,7 @@ function EventReactor() {
 
   return <div>Monitoring contract events...</div>;
 }
-```
+```text
 
 ### Manual Control
 
@@ -118,7 +118,7 @@ return (
     )}
   </div>
 );
-```
+```text
 
 ## Best Practices
 

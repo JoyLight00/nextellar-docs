@@ -15,7 +15,7 @@ Create a new Stellar dApp project.
 
 ```bash
 nextellar <project-name> [options]
-```
+```css
 
 **Arguments:**
 
@@ -41,7 +41,7 @@ nextellar my-app \
   --horizon-url https://horizon.stellar.org \
   --wallets freighter,xbull \
   --skip-install
-```
+```css
 
 ## Help Commands
 
@@ -53,11 +53,11 @@ Display help information.
 nextellar --help
 # or
 nextellar -h
-```
+```text
 
 **Output:**
 
-```
+```bash
 Usage: nextellar <project-name> [options]
 
 Options:
@@ -72,7 +72,7 @@ Options:
   --install-timeout <ms>   Installation timeout in milliseconds
   -v, --version            Show CLI version
   -h, --help               Show help text
-```
+```css
 
 ### --version, -v
 
@@ -82,13 +82,13 @@ Display CLI version.
 nextellar --version
 # or
 nextellar -v
-```
+```text
 
 **Output:**
 
-```
+```bash
 1.0.4
-```
+```css
 
 ## Project Creation Workflow
 
@@ -135,7 +135,7 @@ When you run `nextellar my-app`, here's what happens:
 
 ```bash
 npx nextellar stellar-payment-app
-```
+```text
 
 Creates a project with default settings:
 
@@ -151,7 +151,7 @@ npx nextellar stellar-mainnet-app \
   --horizon-url https://horizon.stellar.org \
   --soroban-url https://soroban-rpc.stellar.org \
   --package-manager pnpm
-```
+```text
 
 Creates a mainnet-ready project.
 
@@ -161,7 +161,7 @@ Creates a mainnet-ready project.
 npx nextellar dev-app \
   --skip-install \
   --wallets freighter
-```
+```text
 
 Creates a project for development:
 
@@ -172,7 +172,7 @@ Creates a project for development:
 
 ```bash
 npx nextellar my-app --install-timeout 3600000
-```
+```text
 
 Increases installation timeout to 1 hour (useful for slow networks).
 
@@ -194,7 +194,7 @@ alias nxt="npx nextellar"
 
 # Usage
 nxt my-app
-```
+```text
 
 **PowerShell:**
 
@@ -204,7 +204,7 @@ function nxt { npx nextellar $args }
 
 # Usage
 nxt my-app
-```
+```bash
 
 ## Related Documentation
 

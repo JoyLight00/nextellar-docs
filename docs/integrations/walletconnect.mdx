@@ -27,7 +27,7 @@ import { WalletProvider } from '@/contexts';
 export default function RootLayout({ children }) {
   return <WalletProvider>{children}</WalletProvider>;
 }
-```
+```text
 
 ### 2. Add the Connect Button
 
@@ -41,7 +41,7 @@ function Header() {
     </header>
   );
 }
-```
+```text
 
 ### 3. Access Wallet State
 
@@ -63,11 +63,11 @@ function Dashboard() {
     </div>
   );
 }
-```
+```text
 
 ## Connection Flow
 
-```
+```text
 User clicks "Connect Wallet"
         �
 Wallet selection modal opens
@@ -81,7 +81,7 @@ Public key retrieved and stored
 Balances fetched automatically
         �
 Session saved to localStorage
-```
+```text
 
 ## Session Persistence
 
@@ -95,7 +95,7 @@ stellar_wallet_address: 'GABC...';
 stellar_wallet_name: 'Freighter';
 
 // On page reload - auto-reconnects if session exists
-```
+```text
 
 ## Components
 
@@ -106,7 +106,7 @@ Pre-built button component with loading states and theme support:
 ```tsx
 <WalletConnectButton theme="light" />
 <WalletConnectButton theme="dark" />
-```
+```json
 
 [Full component documentation �](/docs/components/connect-wallet-button)
 
@@ -118,7 +118,7 @@ Context provider for global wallet state:
 <WalletProvider horizonUrl="https://horizon.stellar.org" network="PUBLIC">
   <App />
 </WalletProvider>
-```
+```json
 
 [Full provider documentation �](/docs/hooks/wallet-provider)
 
@@ -137,7 +137,7 @@ interface WalletState {
   refreshBalances: () => Promise<void>;
   sendPayment?: (opts) => Promise<TransactionResponse>;
 }
-```
+```typescript
 
 ## Supported Wallets
 
@@ -162,7 +162,7 @@ const kit = new StellarWalletsKit({
     new xBullModule(), // Add new wallet
   ],
 });
-```
+```text
 
 ## Error Handling
 
@@ -178,7 +178,7 @@ const handleConnect = async () => {
     }
   }
 };
-```
+```text
 
 ## Related
 

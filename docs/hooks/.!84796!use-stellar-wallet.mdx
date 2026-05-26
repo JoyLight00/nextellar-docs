@@ -39,7 +39,7 @@ export default function WalletDemo() {
     </div>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -50,7 +50,7 @@ useStellarWallet(
   horizonUrl?: string,
   network?: string
 ): StellarWalletState
-```
+```typescript
 
 | Parameter    | Type     | Default                                 | Description                |
 | ------------ | -------- | --------------------------------------- | -------------------------- |
@@ -72,7 +72,7 @@ interface StellarWalletState {
     opts: PaymentOptions
   ) => Promise<HorizonApi.SubmitTransactionResponse>;
 }
-```
+```typescript
 
 #### Properties
 
@@ -84,7 +84,7 @@ Whether a wallet is currently connected.
 {
   connected && <p>Wallet is connected!</p>;
 }
-```
+```typescript
 
 ---
 
@@ -94,7 +94,7 @@ The connected wallet's Stellar public key (G-address).
 
 ```tsx
 <p>Your address: {publicKey}</p>
-```
+```typescript
 
 ---
 
@@ -104,7 +104,7 @@ Name of the connected wallet (e.g., "Freighter", "Albedo").
 
 ```tsx
 <p>Connected via {walletName}</p>
-```
+```json
 
 ---
 
@@ -119,7 +119,7 @@ interface Balance {
   asset_code?: string;
   asset_issuer?: string;
 }
-```
+```typescript
 
 ```tsx
 {
@@ -129,7 +129,7 @@ interface Balance {
     </div>
   ));
 }
-```
+```typescript
 
 #### Methods
 
@@ -148,7 +148,7 @@ const handleConnect = async () => {
     }
   }
 };
-```
+```text
 
 ---
 
@@ -158,7 +158,7 @@ Disconnects the current wallet and clears all state.
 
 ```tsx
 <button onClick={disconnect}>Disconnect</button>
-```
+```typescript
 
 ---
 
@@ -171,7 +171,7 @@ const handleRefresh = async () => {
   await refreshBalances();
   console.log('Balances updated!');
 };
-```
+```bash
 
 ---
 
@@ -186,7 +186,7 @@ interface PaymentOptions {
   asset?: 'XLM' | { code: string; issuer: string };
   memo?: string;
 }
-```
+```typescript
 
 ```tsx
 const result = await sendPayment({
@@ -197,7 +197,7 @@ const result = await sendPayment({
 });
 
 console.log('Transaction hash:', result.hash);
-```
+```typescript
 
 ## Advanced Examples
 
@@ -210,7 +210,7 @@ const wallet = useStellarWallet(
   'https://horizon.stellar.org', // Mainnet Horizon
   Networks.PUBLIC // Mainnet passphrase
 );
-```
+```typescript
 
 ### Sending Custom Assets
 
@@ -228,7 +228,7 @@ await sendPayment({
   },
   memo: 'USDC payment',
 });
-```
+```text
 
 ### Displaying All Balances
 
@@ -263,7 +263,7 @@ function BalanceList() {
     </div>
   );
 }
-```
+```text
 
 ### Auto-Refresh Balances After Payment
 
@@ -289,7 +289,7 @@ function SendPaymentWithRefresh() {
 
   return <button onClick={handleSend}>Send 10 XLM</button>;
 }
-```
+```bash
 
 ### Handling Unfunded Accounts
 
@@ -313,4 +313,4 @@ function AccountStatus() {
           rel="noopener noreferrer"
           className="text-sm text-yellow-600 hover:underline mt-2 inline-block"
         >
-```
+```json

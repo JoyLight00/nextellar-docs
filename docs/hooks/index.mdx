@@ -102,7 +102,7 @@ function MyComponent() {
   const { balances } = useStellarBalances(publicKey);
   // Uses mainnet automatically!
 }
-```
+```text
 
 ### Override Per-Component
 
@@ -112,7 +112,7 @@ You can always override the provider config:
 const { balances } = useStellarBalances(publicKey, {
   horizonUrl: 'https://horizon-testnet.stellar.org',
 });
-```
+```text
 
 ### Standalone Usage
 
@@ -123,7 +123,7 @@ Hooks work without a provider too:
 const { balances } = useStellarBalances(publicKey, {
   horizonUrl: 'https://horizon-testnet.stellar.org',
 });
-```
+```css
 
 ---
 
@@ -139,7 +139,7 @@ const { data, loading, error, refresh } = useSomeHook();
 if (loading) return <Spinner />;
 if (error) return <button onClick={refresh}>Retry</button>;
 return <DisplayData data={data} />;
-```
+```text
 
 ### XDR Building Pattern
 
@@ -154,7 +154,7 @@ const signedXdr = await wallet.signTransaction(xdr);
 
 // 3. Submit signed transaction
 const result = await submitSignedXDR(signedXdr);
-```
+```typescript
 
 ---
 

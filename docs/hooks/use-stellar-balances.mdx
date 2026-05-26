@@ -49,7 +49,7 @@ export default function BalanceDisplay({ publicKey }: { publicKey: string }) {
     </div>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -63,7 +63,7 @@ useStellarBalances(
     pollIntervalMs?: number | null;
   }
 ): StellarBalancesState
-```
+```css
 
 | Parameter        | Type             | Default                   | Description                          |
 | ---------------- | ---------------- | ------------------------- | ------------------------------------ |
@@ -89,7 +89,7 @@ interface Balance {
   balance: string;
   limit?: string;
 }
-```
+```text
 
 ## Examples
 
@@ -104,7 +104,7 @@ const { balances, stopPolling } = useStellarBalances(publicKey, {
 useEffect(() => {
   return () => stopPolling();
 }, [stopPolling]);
-```
+```text
 
 ### Filter by Asset Type
 
@@ -126,7 +126,7 @@ return (
     ))}
   </div>
 );
-```
+```bash
 
 ### Manual Refresh After Transaction
 
@@ -138,7 +138,7 @@ const handleSend = async () => {
   await sendPayment({ to, amount, asset: 'XLM' });
   await refresh(); // Update balances after payment
 };
-```
+```text
 
 ### With Custom Horizon URL
 
@@ -147,7 +147,7 @@ const handleSend = async () => {
 const { balances } = useStellarBalances(publicKey, {
   horizonUrl: 'https://horizon.stellar.org', // Use mainnet
 });
-```
+```text
 
 ## Auto-Consume Pattern
 
@@ -164,7 +164,7 @@ function MyComponent() {
   const { balances } = useStellarBalances(publicKey);
   // Uses mainnet automatically!
 }
-```
+```json
 
 ## Best Practices
 
