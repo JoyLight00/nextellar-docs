@@ -37,7 +37,7 @@ export default function ContractDemo() {
     </button>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -49,7 +49,7 @@ useSorobanContract(options: {
   sorobanRpc?: string;
   network?: 'TESTNET' | 'PUBLIC';
 }): SorobanContractReturn
-```
+```css
 
 | Parameter    | Type                    | Default                                 | Description                  |
 | ------------ | ----------------------- | --------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ interface SorobanContractReturn {
   loading: boolean;
   error: Error | null;
 }
-```
+```typescript
 
 ## Methods
 
@@ -88,7 +88,7 @@ const result = await callFunction('transfer', [
   'GDEF456...', // to
   1000, // amount
 ]);
-```
+```text
 
 **Supported Argument Types:**
 
@@ -111,7 +111,7 @@ const xdr = await buildInvokeXDR('mint', [
 
 // Sign with wallet
 const signedXDR = await wallet.signTransaction(xdr);
-```
+```text
 
 ### submitInvokeWithSecret()
 
@@ -120,7 +120,7 @@ const signedXDR = await wallet.signTransaction(xdr);
 ```tsx
 const result = await submitInvokeWithSecret(xdr, 'SABC123...');
 console.log('Transaction status:', result.status);
-```
+```text
 
 > **Warning**: Never use in production. For testing only.
 
@@ -134,7 +134,7 @@ import { Address } from '@stellar/stellar-sdk';
 
 const recipient = new Address('GABC123...');
 const result = await callFunction('transfer', [recipient, 1000]);
-```
+```text
 
 ### Handling Contract Events
 
@@ -144,7 +144,7 @@ const { callFunction } = useSorobanContract({ contractId });
 const result = await callFunction('emit_event', ['test_event']);
 
 // Listen for events with useSorobanEvents hook
-```
+```text
 
 ### Error Handling
 
@@ -158,7 +158,7 @@ try {
     console.log('Contract not deployed');
   }
 }
-```
+```text
 
 ## Type Conversion
 
@@ -179,7 +179,7 @@ await callFunction('set_list', [[1, 2, 3]]); // �ScvVec
 
 // Object
 await callFunction('set_data', [{ key: 'value' }]); // �ScvMap
-```
+```text
 
 ### XDR to JavaScript
 
@@ -191,7 +191,7 @@ const result = await callFunction('get_data', []);
 // ScvBool �boolean
 // ScvVec �Array
 // ScvMap �Object
-```
+```text
 
 ## Best Practices
 
@@ -207,7 +207,7 @@ const contractConfig = useMemo(
 );
 
 const contract = useSorobanContract(contractConfig);
-```
+```text
 
 ### 2. Handle Loading States
 
@@ -215,7 +215,7 @@ const contract = useSorobanContract(contractConfig);
 const { callFunction, loading } = useSorobanContract({ contractId });
 
 if (loading) return <Spinner />;
-```
+```text
 
 ### 3. Validate Contract Responses
 
@@ -225,7 +225,7 @@ const result = await callFunction('get_balance', [address]);
 if (typeof result !== 'number') {
   throw new Error('Invalid balance returned');
 }
-```
+```typescript
 
 ## Related Hooks
 

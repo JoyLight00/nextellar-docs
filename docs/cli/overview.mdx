@@ -21,7 +21,7 @@ Nextellar CLI is a one-command solution that:
 
 ```bash
 npx nextellar my-stellar-app
-```
+```bash
 
 That's it! Your Stellar dApp is ready in under 2 minutes.
 
@@ -33,7 +33,7 @@ No installation required. Run directly:
 
 ```bash
 npx nextellar my-app
-```
+```text
 
 **Pros:**
 
@@ -52,7 +52,7 @@ Install once, use everywhere:
 ```bash
 npm install -g nextellar
 nextellar my-app
-```
+```bash
 
 **Pros:**
 
@@ -72,18 +72,18 @@ nextellar my-app
 ```bash
 yarn global add nextellar
 nextellar my-app
-```
+```text
 
 **pnpm:**
 
 ```bash
 pnpm add -g nextellar
 nextellar my-app
-```
+```text
 
 ## CLI Architecture
 
-```
+```bash
 nextellar CLI
 Argument Parser (Commander.js)
 Scaffolding Engine
@@ -98,13 +98,13 @@ User Feedback
     Progress Indicators
     Success Messages
     Error Reporting
-```
+```text
 
 ## Command Structure
 
 ```bash
 nextellar <project-name> [options]
-```
+```text
 
 **Components:**
 
@@ -120,7 +120,7 @@ nextellar <project-name> [options]
 npx nextellar my-app
 cd my-app
 npm run dev
-```
+```text
 
 ### Custom Configuration
 
@@ -129,7 +129,7 @@ npx nextellar my-app \
   --package-manager pnpm \
   --horizon-url https://horizon.stellar.org \
   --wallets freighter,xbull
-```
+```text
 
 ### Skip Installation
 
@@ -137,7 +137,7 @@ npx nextellar my-app \
 npx nextellar my-app --skip-install
 cd my-app
 pnpm install  # Install with your preferred package manager
-```
+```css
 
 ## Environment Variables
 
@@ -156,7 +156,7 @@ Nextellar respects these environment variables:
 npx nextellar --version
 # or
 nextellar -v
-```
+```bash
 
 ### Update to Latest
 
@@ -164,13 +164,13 @@ nextellar -v
 
 ```bash
 npx nextellar@latest my-app
-```
+```text
 
 **Global install:**
 
 ```bash
 npm update -g nextellar
-```
+```text
 
 ## Troubleshooting
 
@@ -186,7 +186,7 @@ npx nextellar my-app
 
 # Or reinstall globally
 npm install -g nextellar
-```
+```text
 
 ### Permission Errors
 
@@ -200,7 +200,7 @@ npx nextellar my-app
 
 # Or fix npm permissions
 sudo chown -R $(whoami) ~/.npm
-```
+```text
 
 ### Slow Installation
 
@@ -216,7 +216,7 @@ npx nextellar my-app --install-timeout 3600000
 npx nextellar my-app --skip-install
 cd my-app
 npm install
-```
+```bash
 
 ## Next Steps
 

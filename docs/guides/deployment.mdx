@@ -26,7 +26,7 @@ Create production environment variables:
 NEXT_PUBLIC_HORIZON_URL=https://horizon.stellar.org
 NEXT_PUBLIC_NETWORK=PUBLIC
 NEXT_PUBLIC_SOROBAN_RPC=https://soroban-rpc.stellar.org
-```
+```bash
 
 > [!IMPORTANT]
 > For testnet, use:
@@ -60,7 +60,7 @@ vercel
 
 # Deploy to production
 vercel --prod
-```
+```bash
 
 ### Environment Variables on Vercel
 
@@ -93,7 +93,7 @@ Go to **Project Settings �Environment Variables** and add:
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-```
+```css
 
 ---
 
@@ -121,14 +121,14 @@ COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
 CMD ["node", "server.js"]
-```
+```text
 
 ### Build and Run
 
 ```bash
 docker build -t my-stellar-app .
 docker run -p 3000:3000 my-stellar-app
-```
+```bash
 
 ---
 
@@ -172,7 +172,7 @@ Update your `WalletProvider` for production:
 >
   <App />
 </WalletProvider>
-```
+```text
 
 Or use environment variables:
 
@@ -187,7 +187,7 @@ Or use environment variables:
 >
   <App />
 </WalletProvider>
-```
+```text
 
 ---
 

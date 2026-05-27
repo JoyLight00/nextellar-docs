@@ -11,7 +11,7 @@ The `useOfferBook` hook queries Stellar's decentralized exchange (DEX) order boo
 
 - **Order Book Data**: Fetch bids and asks for trading pairs
 - **Price Discovery**: Get current market prices
-- ˆ **Depth Analysis**: Analyze order book depth
+- ï¿½ **Depth Analysis**: Analyze order book depth
 - **Real-Time Updates**: Optional live order book updates
 - **Multiple Pairs**: Query multiple trading pairs
 
@@ -46,7 +46,7 @@ export default function OrderBook() {
     </div>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -59,7 +59,7 @@ useOfferBook(options: {
   limit?: number;
   horizonUrl?: string;
 }): OfferBookState
-```
+```css
 
 | Parameter    | Type     | Default      | Description               |
 | ------------ | -------- | ------------ | ------------------------- |
@@ -80,7 +80,7 @@ interface OfferBookState {
   error: Error | null;
   refresh: () => Promise<void>;
 }
-```
+```text
 
 ## Examples
 
@@ -98,7 +98,7 @@ return (
     <p>Spread: {spread}%</p>
   </div>
 );
-```
+```text
 
 ### Calculate Order Book Depth
 
@@ -116,7 +116,7 @@ const totalAskVolume = asks.reduce(
 
 console.log('Buy pressure:', totalBidVolume);
 console.log('Sell pressure:', totalAskVolume);
-```
+```bash
 
 ### Auto-Refresh Order Book
 
@@ -127,7 +127,7 @@ useEffect(() => {
   const interval = setInterval(refresh, 5000); // Refresh every 5s
   return () => clearInterval(interval);
 }, [refresh]);
-```
+```bash
 
 ## Best Practices
 

@@ -38,7 +38,7 @@ export default function TransactionList() {
     </div>
   );
 }
-```
+```text
 
 ## API Reference
 
@@ -53,7 +53,7 @@ useTransactionHistory(
     horizonUrl?: string;
   }
 ): TransactionHistoryState
-```
+```css
 
 | Parameter    | Type              | Default      | Description           |
 | ------------ | ----------------- | ------------ | --------------------- |
@@ -73,7 +73,7 @@ interface TransactionHistoryState {
   hasMore: boolean;
   refresh: () => Promise<void>;
 }
-```
+```text
 
 ## Examples
 
@@ -87,7 +87,7 @@ const recentTxs = transactions.filter((tx) => {
   const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
   return txDate > weekAgo;
 });
-```
+```text
 
 ### Group by Type
 
@@ -95,7 +95,7 @@ const recentTxs = transactions.filter((tx) => {
 const paymentTxs = transactions.filter((tx) =>
   tx.operations.some((op) => op.type === 'payment')
 );
-```
+```text
 
 ### Infinite Scroll
 
@@ -119,7 +119,7 @@ function InfiniteTransactionList() {
 
   return <div>{/* render transactions */}</div>;
 }
-```
+```text
 
 ## Best Practices
 

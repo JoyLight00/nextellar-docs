@@ -35,11 +35,11 @@ A full-featured payment app with:
 npx nextellar stellar-payment-app
 cd stellar-payment-app
 npm run dev
-```
+```text
 
 ## Step 2: Project Structure
 
-```
+```bash
 stellar-payment-app/
 src/
   app/
@@ -58,7 +58,7 @@ src/
   lib/
       stellar-wallet-kit.ts       # Wallet configuration
 package.json
-```
+```typescript
 
 ## Step 3: Build the Main Interface
 
@@ -148,7 +148,7 @@ export default function PaymentApp() {
     </div>
   );
 }
-```
+```typescript
 
 ## Step 4: Balance Card Component
 
@@ -224,7 +224,7 @@ export default function BalanceCard({ balances, publicKey }: BalanceCardProps) {
     </div>
   );
 }
-```
+```typescript
 
 ## Step 5: Send Payment Form
 
@@ -342,7 +342,7 @@ export default function SendPaymentForm() {
             rel="noopener noreferrer"
             className="text-sm text-green-600 dark:text-green-400 hover:underline break-all"
           >
-            View on Stellar Expert †
+            View on Stellar Expert ï¿½
           </a>
         </div>
       )}
@@ -356,7 +356,7 @@ export default function SendPaymentForm() {
     </form>
   );
 }
-```
+```bash
 
 ## Features Implemented
 
@@ -401,7 +401,7 @@ Deploy to Vercel:
 ```bash
 npm run build
 vercel deploy
-```
+```bash
 
 ## Next Steps
 

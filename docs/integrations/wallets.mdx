@@ -48,7 +48,7 @@ const kit = new StellarWalletsKit({
     new HanaModule(),
   ],
 });
-```
+```text
 
 ### Connection Flow
 
@@ -83,7 +83,7 @@ function MyComponent() {
     </button>
   );
 }
-```
+```text
 
 ### With useStellarWallet (Standalone)
 
@@ -95,7 +95,7 @@ function MyComponent() {
 
   // Same interface as useWallet
 }
-```
+```text
 
 ### Pre-built Button Component
 
@@ -105,7 +105,7 @@ import WalletConnectButton from '@/components/WalletConnectButton';
 function Header() {
   return <WalletConnectButton theme="dark" />;
 }
-```
+```text
 
 ## Session Persistence
 
@@ -121,7 +121,7 @@ localStorage.setItem('stellar_wallet_name', 'Freighter');
 // Cleared on disconnect
 localStorage.removeItem('stellar_wallet_connected');
 // ... etc
-```
+```text
 
 On page load, the provider checks for an existing session and auto-reconnects.
 
@@ -137,7 +137,7 @@ const { signedTxXdr } = await kit.signTransaction(unsignedXdr, {
   address: publicKey,
   networkPassphrase: Networks.TESTNET,
 });
-```
+```text
 
 Most hooks handle signing internally:
 
@@ -150,7 +150,7 @@ await sendPayment({
   amount: '10',
   asset: 'XLM',
 });
-```
+```typescript
 
 ## Adding More Wallets
 
@@ -175,7 +175,7 @@ const kit = new StellarWalletsKit({
     new xBullModule(), // Add to array
   ],
 });
-```
+```text
 
 ## Network Configuration
 
@@ -186,7 +186,7 @@ const kit = new StellarWalletsKit({
   network: WalletNetwork.TESTNET,
   // ...
 });
-```
+```text
 
 ### Mainnet
 
@@ -195,7 +195,7 @@ const kit = new StellarWalletsKit({
   network: WalletNetwork.PUBLIC,
   // ...
 });
-```
+```text
 
 ### Dynamic Switching
 
@@ -208,7 +208,7 @@ const network =
   localStorage.getItem('network') === 'mainnet'
     ? WalletNetwork.PUBLIC
     : WalletNetwork.TESTNET;
-```
+```text
 
 ## Error Handling
 
@@ -224,7 +224,7 @@ const handleConnect = async () => {
     }
   }
 };
-```
+```text
 
 ### User Rejected
 
@@ -239,7 +239,7 @@ try {
     console.log('User cancelled connection');
   }
 }
-```
+```text
 
 ### Transaction Rejection
 
@@ -251,7 +251,7 @@ try {
     alert('Transaction was cancelled');
   }
 }
-```
+```text
 
 ## Wallet State
 
@@ -268,7 +268,7 @@ interface WalletState {
   refreshBalances: () => Promise<void>;
   sendPayment?: (opts) => Promise<TransactionResponse>;
 }
-```
+```json
 
 ## Freighter-Specific Notes
 

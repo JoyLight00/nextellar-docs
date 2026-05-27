@@ -61,7 +61,7 @@ flowchart TB
     CONTEXT --> SDK2
     SDK1 --> NETWORK
     SDK2 --> NETWORK
-```
+```css
 
 ---
 
@@ -75,7 +75,7 @@ All hooks automatically consume configuration from `WalletProvider`:
 <WalletProvider horizonUrl="https://horizon.stellar.org">
   <App /> {/* All hooks use mainnet automatically */}
 </WalletProvider>
-```
+```text
 
 ### XDR Building Pattern
 
@@ -90,7 +90,7 @@ const signedXdr = await wallet.signTransaction(xdr);
 
 // Submit to network
 const result = await submitSignedXDR(signedXdr);
-```
+```text
 
 ### Type Safety
 
@@ -104,7 +104,7 @@ interface Balance {
   balance: string;
   limit?: string;
 }
-```
+```text
 
 ### Error Handling
 
@@ -115,7 +115,7 @@ const { data, loading, error, refresh } = useSomeHook();
 
 if (loading) return <Spinner />;
 if (error) return <button onClick={refresh}>Retry</button>;
-```
+```bash
 
 ---
 
@@ -147,7 +147,7 @@ The SDK is built on:
 
    ```bash
    npx nextellar my-app
-   ```
+```bash
 
 2. **Wrap with WalletProvider**
 
@@ -155,13 +155,13 @@ The SDK is built on:
    <WalletProvider>
      <App />
    </WalletProvider>
-   ```
+```bash
 
 3. **Use hooks**
    ```tsx
    const { connect, publicKey } = useWallet();
    const { balances } = useStellarBalances(publicKey);
-   ```
+```bash
 
 ---
 

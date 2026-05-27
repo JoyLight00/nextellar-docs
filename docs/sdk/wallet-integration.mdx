@@ -48,7 +48,7 @@ const kit = new StellarWalletsKit({
     new HanaModule(),
   ],
 });
-```
+```text
 
 ### Connection Flow
 
@@ -71,7 +71,7 @@ function ConnectButton() {
     </button>
   );
 }
-```
+```text
 
 ## Adding More Wallets
 
@@ -98,7 +98,7 @@ const kit = new StellarWalletsKit({
     new xBullModule(), // Add to modules array
   ],
 });
-```
+```text
 
 ## Transaction Signing
 
@@ -117,7 +117,7 @@ const signedXdr = await signTransaction({
   unsignedTransaction: unsignedXdr,
   address: publicKey,
 });
-```
+```typescript
 
 Most hooks handle this automatically. For example, `useStellarWallet` includes a `sendPayment` function that builds, signs, and submits transactions.
 
@@ -130,7 +130,7 @@ const kit = new StellarWalletsKit({
   network: WalletNetwork.TESTNET,
   // ...
 });
-```
+```text
 
 ### Mainnet
 
@@ -139,7 +139,7 @@ const kit = new StellarWalletsKit({
   network: WalletNetwork.PUBLIC,
   // ...
 });
-```
+```text
 
 ### Dynamic Network Switching
 
@@ -154,7 +154,7 @@ const network =
   localStorage.getItem('network') === 'mainnet'
     ? WalletNetwork.PUBLIC
     : WalletNetwork.TESTNET;
-```
+```text
 
 ## Session Persistence
 
@@ -166,7 +166,7 @@ localStorage.getItem('stellar_wallet_connected'); // 'true' | 'false'
 localStorage.getItem('stellar_wallet_id'); // wallet adapter ID
 localStorage.getItem('stellar_wallet_address'); // public key
 localStorage.getItem('stellar_wallet_name'); // display name
-```
+```text
 
 On page reload, the `WalletProvider` or `useStellarWallet` hook automatically reconnects if a previous session exists.
 
@@ -185,7 +185,7 @@ const handleConnect = async () => {
     console.error('Connection failed:', error);
   }
 };
-```
+```text
 
 ### Disconnection
 
@@ -196,7 +196,7 @@ const handleDisconnect = () => {
   disconnect();
   // localStorage is cleared automatically
 };
-```
+```text
 
 ## Testing Without a Wallet
 
@@ -215,7 +215,7 @@ const result = await signAndSubmitWithSecret({
   amount: '10',
   secret: 'SABC...', // Never do this in production!
 });
-```
+```typescript
 
 ## Common Issues
 

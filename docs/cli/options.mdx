@@ -17,7 +17,7 @@ Generate a TypeScript project (default).
 nextellar my-app --typescript
 # or
 nextellar my-app -t
-```
+```css
 
 **Default:** `true`  
 **Type:** Boolean  
@@ -31,7 +31,7 @@ Generate a JavaScript project.
 nextellar my-app --javascript
 # or
 nextellar my-app -j
-```
+```css
 
 **Default:** `false`  
 **Type:** Boolean  
@@ -47,7 +47,7 @@ Override the default Horizon endpoint.
 
 ```bash
 nextellar my-app --horizon-url https://horizon.stellar.org
-```
+```css
 
 **Default:** `https://horizon-testnet.stellar.org`  
 **Type:** String (URL)  
@@ -65,7 +65,7 @@ Override the default Soroban RPC endpoint.
 
 ```bash
 nextellar my-app --soroban-url https://soroban-rpc.stellar.org
-```
+```css
 
 **Default:** `https://soroban-testnet.stellar.org`  
 **Type:** String (URL)  
@@ -86,7 +86,7 @@ Specify which wallet adapters to include.
 nextellar my-app --wallets freighter,xbull,ledger
 # or
 nextellar my-app -w freighter,albedo
-```
+```text
 
 **Default:** `freighter,albedo,lobstr`  
 **Type:** Comma-separated string  
@@ -111,7 +111,7 @@ nextellar my-app --wallets freighter,xbull,ledger
 
 # All supported wallets
 nextellar my-app --wallets freighter,albedo,lobstr,xbull,ledger
-```
+```css
 
 ## Installation Options
 
@@ -121,7 +121,7 @@ Skip automatic dependency installation.
 
 ```bash
 nextellar my-app --skip-install
-```
+```text
 
 **Default:** `false`  
 **Type:** Boolean
@@ -138,7 +138,7 @@ nextellar my-app --skip-install
 ```bash
 cd my-app
 npm install  # or yarn install, pnpm install
-```
+```css
 
 ### --package-manager
 
@@ -146,7 +146,7 @@ Choose which package manager to use.
 
 ```bash
 nextellar my-app --package-manager pnpm
-```
+```css
 
 **Default:** Auto-detected  
 **Type:** String  
@@ -165,7 +165,7 @@ Set installation timeout in milliseconds.
 
 ```bash
 nextellar my-app --install-timeout 3600000
-```
+```css
 
 **Default:** `1200000` (20 minutes)  
 **Type:** Number (milliseconds)  
@@ -195,7 +195,7 @@ Skip prompts and use default values.
 nextellar my-app --defaults
 # or
 nextellar my-app -d
-```
+```css
 
 **Default:** `false`  
 **Type:** Boolean
@@ -219,7 +219,7 @@ Display CLI version.
 nextellar --version
 # or
 nextellar -v
-```
+```css
 
 **Output:** Version number (e.g., `1.0.4`)
 
@@ -231,7 +231,7 @@ Display help information.
 nextellar --help
 # or
 nextellar -h
-```
+```text
 
 **Output:** Complete usage guide with all options
 
@@ -245,7 +245,7 @@ nextellar stellar-mainnet-app \
   --soroban-url https://soroban-rpc.stellar.org \
   --wallets freighter,xbull,ledger \
   --package-manager pnpm
-```
+```text
 
 ### Development Setup
 
@@ -253,7 +253,7 @@ nextellar stellar-mainnet-app \
 nextellar dev-app \
   --skip-install \
   --wallets freighter
-```
+```text
 
 ### CI/CD Setup
 
@@ -262,7 +262,7 @@ nextellar ci-app \
   --defaults \
   --package-manager npm \
   --install-timeout 600000
-```
+```text
 
 ### Custom Network
 
@@ -271,7 +271,7 @@ nextellar custom-app \
   --horizon-url https://my-horizon.example.com \
   --soroban-url https://my-soroban.example.com \
   --wallets freighter
-```
+```text
 
 ## Environment Variables
 
@@ -284,7 +284,7 @@ Used for package manager detection.
 ```bash
 # Set by package managers automatically
 npm_config_user_agent="npm/10.2.0 node/v20.10.0"
-```
+```text
 
 ### NODE_ENV
 
@@ -292,7 +292,7 @@ Environment mode (development/production).
 
 ```bash
 NODE_ENV=production npx nextellar my-app
-```
+```text
 
 ## Validation Rules
 
@@ -309,7 +309,7 @@ NODE_ENV=production npx nextellar my-app
 nextellar my-app
 nextellar stellar_payment_app
 nextellar my-dapp-2024
-```
+```text
 
 **Invalid:**
 
@@ -317,7 +317,7 @@ nextellar my-dapp-2024
 nextellar "my app"        # Spaces not allowed
 nextellar my@app          # Special characters not allowed
 nextellar ../my-app       # Path traversal not allowed
-```
+```bash
 
 ### URLs
 

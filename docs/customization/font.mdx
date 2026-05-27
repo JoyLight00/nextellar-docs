@@ -19,7 +19,7 @@ const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 });
-```
+```typescript
 
 ## Applying the Font Globally
 
@@ -33,7 +33,7 @@ To apply the font globally, it is used in the `<body>` tag inside `project-root/
       text-sm
       font-regular tracking-wide antialiased`}
   >
-```
+```text
 
 - `text-sm` is a Tailwind CSS utility class that controls the base font size.
 - You can change this to `xs`,`md`,`lg`, `xs`, `2xl`, or any other Tailwind font size to modify the default text size.
@@ -65,7 +65,7 @@ module.exports = {
   },
   plugins: [],
 };
-```
+```typescript
 
 - The `screens` object defines responsive breakpoints. You can modify them based on your requirements.
 - The default values provided are industry standards, but you can adjust them as needed.
@@ -80,7 +80,7 @@ const geistSans = Geist({
   weight: ['400', '700'],
   subsets: ['latin'],
 });
-```
+```typescript
 
 - `"400"` represents regular weight, while `"700"` is bold.
 - You can add more values like `"300"` (light) or `"900"` (extra bold) if required.
