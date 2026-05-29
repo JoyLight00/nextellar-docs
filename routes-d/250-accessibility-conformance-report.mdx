@@ -118,3 +118,34 @@ Documentation for UI components (`docs/components/*.mdx`) was checked for explic
 4. **Info** — Theme contrast and focus management (A-05, A-07) — track separately
 
 ---
+
+## Conformance Summary
+
+| Category | Status |
+| -------- | ------ |
+| Perceivable (text alternatives, headings) | **Largely conformant** — one heading issue fixed; images have alt text |
+| Operable (keyboard, navigation) | **Conformant** — search shortcut documented; component ARIA documented |
+| Understandable (readable, predictable) | **Conformant** — descriptive links; consistent heading patterns |
+| Robust (compatible) | **Conformant** — semantic HTML in MDX; tables use proper headers |
+
+**Overall assessment:** Documentation content meets WCAG 2.1 Level AA for in-scope criteria. Two low-priority items (example card labels, search focus return) remain open and should be addressed during the next UI pass.
+
+---
+
+## Verification
+
+This draft is stored outside `docs/` and does not affect the Contentlayer build. When promoted to a live page (proposed: `docs/guides/accessibility-report.mdx`):
+
+```bash
+pnpm build:content
+pnpm check:links
+```
+
+### Rendering checklist
+
+- [ ] Frontmatter includes `title` and `description`
+- [ ] Audit tables render in light and dark mode
+- [ ] Internal links to audited pages resolve
+- [ ] Page listed under **Guides** in sidebar
+
+---
