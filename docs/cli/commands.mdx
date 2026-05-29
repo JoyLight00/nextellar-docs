@@ -188,6 +188,31 @@ Nextellar Doctor
 10 checks passed, 1 checks failed
 ```
 
+**JSON output:**
+
+```bash
+nextellar doctor --json
+```
+
+```json
+{
+  "checks": [
+    {
+      "id": "node",
+      "name": "Node.js",
+      "required": true,
+      "ok": true,
+      "detail": "v20.18.0 (>= 20.0.0 required)"
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "requiredFailures": 0
+}
+```
+
+The command exits with code `0` when all required checks pass, or `1` when one or more required checks fail. Optional check failures are reported but do not affect the exit code.
+
 ### nextellar deploy
 
 Validate and prepare your project for production deployment. This command checks that your Horizon and Soroban RPC endpoints are properly configured, and builds a optimized production bundle of your Stellar dApp.
