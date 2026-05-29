@@ -126,3 +126,29 @@ If using Vercel Analytics or Plausible, list them in the site privacy policy wit
 - Do not log search queries containing wallet public keys or secrets
 
 ---
+
+## Verification
+
+This draft is stored outside `docs/` and does not affect the Contentlayer build. When the strategy is promoted to a live page (proposed location: `docs/guides/analytics-and-feedback.mdx`), run:
+
+```bash
+pnpm build:content
+pnpm check:links
+```
+
+### Rendering checklist
+
+- [ ] Frontmatter includes `title` and `description`
+- [ ] All internal links resolve (e.g. `/docs/guides/search`, `/docs/cli/commands`)
+- [ ] Code blocks use valid syntax highlighting tags
+- [ ] Tables render correctly in light and dark mode
+- [ ] Page appears in sidebar under **Guides**
+
+### Planned doc location
+
+| File | Purpose |
+| ---- | ------- |
+| `docs/guides/analytics-and-feedback.mdx` | Live strategy page (future) |
+| `routes-d/249-docs-analytics-feedback-strategy.mdx` | Working draft (this file) |
+
+---
