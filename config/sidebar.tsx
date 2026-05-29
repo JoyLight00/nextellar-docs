@@ -68,6 +68,11 @@ export const sidebarNav: SidebarSection[] = [
       { title: 'Contributing', href: '/docs/guides/contributing' },
       { title: 'Editor Setup', href: '/docs/guides/editor-setup' },
       { title: 'Add a Docs Page', href: '/docs/guides/add-docs-page' },
+      { title: 'Search Experience', href: '/docs/guides/search' },
+      {
+        title: 'Testing Docs Changes',
+        href: '/docs/guides/testing-docs-changes',
+      },
       {
         title: 'Diagram & Image Style',
         href: '/docs/guides/diagram-image-style',
