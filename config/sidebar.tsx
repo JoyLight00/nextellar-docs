@@ -47,6 +47,7 @@ export const sidebarNav: SidebarSection[] = [
       { title: 'Introduction', href: '/docs/getting-started/introduction' },
       { title: 'Installation', href: '/docs/getting-started/installation' },
       { title: 'Quick Start', href: '/docs/getting-started/quick-start' },
+      { title: 'FAQ', href: '/docs/getting-started/faq' },
     ],
   },
   {
@@ -66,20 +67,66 @@ export const sidebarNav: SidebarSection[] = [
     defaultOpen: false,
     pages: [
       { title: 'Contributing', href: '/docs/guides/contributing' },
+      { title: 'Docs Style Guide', href: '/docs/guides/style-guide' },
+      {
+        title: 'Versioned Docs Strategy',
+        href: '/docs/guides/versioned-docs-strategy',
+      },
+      { title: 'Redirects Map', href: '/docs/guides/redirects-map' },
+      {
+        title: 'Hook Error Handling',
+        href: '/docs/guides/hook-error-handling',
+      },
       { title: 'Editor Setup', href: '/docs/guides/editor-setup' },
-      { title: 'Internationalization', href: '/docs/guides/internationalization' },
+      { title: 'Add a Docs Page', href: '/docs/guides/add-docs-page' },
+      {
+        title: 'Navigation Configuration',
+        href: '/docs/guides/navigation-configuration',
+      },
+      {
+        title: 'Release Notes Workflow',
+        href: '/docs/guides/release-notes-workflow',
+      },
+      { title: 'Extending the CLI', href: '/docs/guides/extending-the-cli' },
+      {
+        title: 'Performance Budget',
+        href: '/docs/guides/performance-budget-guide',
+      },
+      { title: 'Search Experience', href: '/docs/guides/search' },
+      {
+        title: 'Testing Docs Changes',
+        href: '/docs/guides/testing-docs-changes',
+      },
+      {
+        title: 'Diagram & Image Style',
+        href: '/docs/guides/diagram-image-style',
+      },
+      {
+        title: 'Offline Reading Export',
+        href: '/docs/guides/offline-reading',
+      },
+      {
+        title: 'Internationalization',
+        href: '/docs/guides/internationalization',
+      },
       { title: 'Deployment', href: '/docs/guides/deployment' },
       { title: 'Glossary', href: '/docs/guides/glossary' },
+      {
+        title: 'MDX Custom Components',
+        href: '/docs/guides/mdx-custom-components',
+      },
+      { title: 'Link Validation', href: '/docs/guides/link-validation' },
     ],
   },
   {
     title: 'SDK & Reference',
     icon: <Database className="h-5 w-5" />,
-    defaultOpen: false,
+    defaultOpen: true,
     pages: [
+      { title: 'API Explorer', href: '/docs/api/explorer' },
       { title: 'Overview', href: '/docs/sdk/overview' },
-      { title: 'Hooks', href: '/docs/hooks' },
       { title: 'API Reference', href: '/docs/sdk/api-reference' },
+      { title: 'Wallet Integration', href: '/docs/sdk/wallet-integration' },
     ],
   },
   {
@@ -101,21 +148,65 @@ export const sidebarNav: SidebarSection[] = [
     ],
   },
   {
+    title: 'CLI',
+    icon: <Zap className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      { title: 'Overview', href: '/docs/cli/overview' },
+      { title: 'Commands', href: '/docs/cli/commands' },
+      { title: 'Cheat Sheet', href: '/docs/cli/cheat-sheet' },
+      { title: 'Flags & Options', href: '/docs/cli/flags' },
+      { title: 'Scaffolding Templates', href: '/docs/cli/templates' },
+    ],
+  },
+  {
     title: 'Integrations',
     icon: <Plug className="h-5 w-5" />,
-    defaultOpen: true,
+    defaultOpen: false,
     pages: [
-      { title: 'Stellar Horizon', href: '/docs/integrations/horizon' },
-      {
-        title: 'Soroban (Smart Contracts)',
-        href: '/docs/integrations/soroban',
-      },
+      { title: 'Overview', href: '/docs/integrations' },
       {
         title: 'Wallets (Freighter, Albedo, Lobstr, xBull, Hana)',
         href: '/docs/integrations/wallets',
       },
       { title: 'WalletConnect', href: '/docs/integrations/walletconnect' },
+      { title: 'Stellar Horizon', href: '/docs/integrations/horizon' },
+      {
+        title: 'Soroban (Smart Contracts)',
+        href: '/docs/integrations/soroban',
+      },
       { title: 'Testing (MSW)', href: '/docs/integrations/testing' },
+    ],
+  },
+  {
+    title: 'Guides',
+    icon: <BookOpen className="h-5 w-5" />,
+    defaultOpen: false,
+    pages: [
+      { title: 'Contributing', href: '/docs/guides/contributing' },
+      { title: 'Docs Style Guide', href: '/docs/guides/style-guide' },
+      {
+        title: 'Versioned Docs Strategy',
+        href: '/docs/guides/versioned-docs-strategy',
+      },
+      { title: 'Redirects Map', href: '/docs/guides/redirects-map' },
+      {
+        title: 'Hook Error Handling',
+        href: '/docs/guides/hook-error-handling',
+      },
+      { title: 'Editor Setup', href: '/docs/guides/editor-setup' },
+      { title: 'Testing (Vitest)', href: '/docs/guides/testing' },
+      {
+        title: 'Internationalization',
+        href: '/docs/guides/internationalization',
+      },
+      { title: 'Deployment', href: '/docs/guides/deployment' },
+      { title: 'Glossary', href: '/docs/guides/glossary' },
+      {
+        title: 'MDX Custom Components',
+        href: '/docs/guides/mdx-custom-components',
+      },
+      { title: 'Link Validation', href: '/docs/guides/link-validation' },
     ],
   },
   {

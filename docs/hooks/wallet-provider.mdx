@@ -19,7 +19,7 @@ The `WalletProvider` component wraps your application to provide global wallet f
 
 Wrap your app with `WalletProvider`:
 
-```tsx
+````tsx
 // app/layout.tsx or _app.tsx
 import { WalletProvider } from '@/contexts';
 
@@ -155,7 +155,7 @@ Returns `undefined` when used outside a `WalletProvider`.
 ## Sending Payments
 
 ```tsx
-function SendPaymentForm() {
+function PaymentForm() {
   const { connected, sendPayment } = useWallet();
   const [recipient, setRecipient] = useState('');
   const [amount, setAmount] = useState('');
@@ -248,6 +248,20 @@ This means you can:
 2. **Override per-component** - Pass custom `horizonUrl` in options
 3. **Use standalone** - Works without provider (uses defaults)
 
+## Error Handling
+
+### Missing Network Configuration
+
+If `horizonUrl` or the network passphrase is missing, fail fast with a configuration message instead of guessing defaults.
+
+### Reconnect Failures
+
+If auto-reconnect fails after a reload or storage clear, surface the state clearly and let the user reconnect manually.
+
+### Downstream Hook Errors
+
+When child hooks fail, keep the provider state visible and let the child hook own its retry controls.
+
 ---
 
 ## Related
@@ -255,3 +269,4 @@ This means you can:
 - [useStellarWallet](/docs/hooks/use-stellar-wallet) - Standalone wallet hook
 - [WalletConnectButton](/docs/hooks/wallet-connect-button) - Pre-built UI component
 - [useStellarBalances](/docs/hooks/use-stellar-balances) - Balance fetching
+````

@@ -11,15 +11,15 @@ The Nextellar CLI is a powerful command-line tool for scaffolding production-rea
 
 Nextellar CLI is a one-command solution that:
 
-- Scaffolds complete Next.js 16 applications
-- Configures Stellar SDK and wallet adapters
-- Installs all dependencies automatically
-- Sets up TypeScript, Tailwind CSS, and ESLint
-- Creates 8 production-ready React hooks
+- Scaffolds complete Next.js 16 applications.
+- Configures Stellar SDK and wallet adapters.
+- Installs all dependencies automatically.
+- Sets up TypeScript, Tailwind CSS, and ESLint.
+- Creates 8 production-ready React hooks.
 
 ## Quick Start
 
-```bash
+````bash
 npx nextellar my-stellar-app
 ```bash
 
@@ -37,13 +37,13 @@ npx nextellar my-app
 
 **Pros:**
 
-- Always uses latest version
-- No global installation needed
-- Works immediately
+- Always uses latest version.
+- No global installation needed.
+- Works immediately.
 
 **Cons:**
 
-- Slightly slower first run (downloads package)
+- Slightly slower first run (downloads package).
 
 ### Method 2: Global Installation
 
@@ -56,14 +56,14 @@ nextellar my-app
 
 **Pros:**
 
-- Faster execution
-- Works offline (after first install)
-- Convenient for multiple projects
+- Faster execution.
+- Works offline (after first install).
+- Convenient for multiple projects.
 
 **Cons:**
 
-- Requires manual updates (`npm update -g nextellar`)
-- Takes up global npm space
+- Requires manual updates (`npm update -g nextellar`).
+- Takes up global npm space.
 
 ### Method 3: Package Manager Specific
 
@@ -139,6 +139,16 @@ cd my-app
 pnpm install  # Install with your preferred package manager
 ```css
 
+### Verify Environment
+
+Before scaffolding, confirm your machine meets the requirements:
+
+```bash
+npx nextellar doctor
+````
+
+Use `nextellar doctor --json` in CI pipelines. See [CLI Commands](/docs/cli/commands) for full output examples.
+
 ## Environment Variables
 
 Nextellar respects these environment variables:
@@ -152,7 +162,7 @@ Nextellar respects these environment variables:
 
 ### Check Version
 
-```bash
+````bash
 npx nextellar --version
 # or
 nextellar -v
@@ -263,3 +273,4 @@ npm install
 - [Installation Guide](/docs/getting-started/installation) - Detailed installation instructions
 - [Quick Start](/docs/getting-started/quick-start) - Build your first app
 - [Project Structure](/docs/getting-started/project-structure) - Understand the generated code
+````

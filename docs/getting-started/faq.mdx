@@ -1,0 +1,97 @@
+---
+title: FAQ
+description: Answers to common questions about getting started with Nextellar.
+---
+
+# FAQ
+
+Answers to the most common questions about getting started with Nextellar.
+
+## What is Nextellar?
+
+Nextellar is a one-step CLI toolkit that scaffolds production-ready Next.js + TypeScript applications with built-in Stellar blockchain support. A single command gives you wallet connectivity, 8 production-ready React hooks, and a clean project structure ready for development.
+
+## What are the prerequisites?
+
+You need:
+
+- **Node.js** 20.18.0 or later
+- **npm**, **yarn**, or **pnpm**
+- A terminal and a code editor
+
+No global installation is required to create your first project.
+
+## How do I create my first project?
+
+Run the following command and replace `my-app` with your project name:
+
+```bash
+npx nextellar my-app
+```
+
+Nextellar will scaffold the project, install dependencies, and configure Stellar integrations automatically.
+
+## Do I need to install Nextellar globally?
+
+No. Using `npx nextellar` is the recommended approach and requires no global install. If you create projects frequently, you can install globally:
+
+```bash
+npm install -g nextellar
+```
+
+## Which wallets are supported out of the box?
+
+Nextellar supports **Freighter**, **Albedo**, **Lobstr**, **xBull**, and **Hana** through the Stellar Wallets Kit. The scaffold auto-detects installed wallets and wires them up via the `useStellarWallet` hook.
+
+## Does Nextellar support mainnet?
+
+Yes. By default the scaffold targets Stellar testnet. To target mainnet, pass the `--horizon-url` flag during scaffolding:
+
+```bash
+npx nextellar my-app --horizon-url https://horizon.stellar.org
+```
+
+You can also update the Horizon URL in your project's environment configuration after scaffolding.
+
+## What React hooks are included?
+
+Every Nextellar project ships with 8 production-ready hooks:
+
+| Hook                    | Purpose                             |
+| ----------------------- | ----------------------------------- |
+| `useStellarWallet`      | Wallet connection and account state |
+| `useStellarBalances`    | Fetch account balances              |
+| `useStellarPayment`     | Send XLM and asset payments         |
+| `useTransactionHistory` | Query transaction history           |
+| `useTrustlines`         | Manage asset trustlines             |
+| `useOfferBook`          | Read DEX order books                |
+| `useSorobanContract`    | Invoke Soroban smart contracts      |
+| `useSorobanEvents`      | Subscribe to contract events        |
+
+## Why does the content build step fail?
+
+The most common cause is a missing or malformed frontmatter field. Every MDX file requires `title` and `description`:
+
+```yaml
+---
+title: My Page
+description: A short description of this page.
+---
+```
+
+Run `pnpm build:content` after adding or editing any MDX file and check the terminal output for the specific file and line causing the error.
+
+## How do I add a new documentation page?
+
+1. Create a `.mdx` file in the appropriate `docs/` subdirectory.
+2. Add `title` and `description` frontmatter.
+3. Register the page in `config/sidebar.tsx`.
+4. Run `pnpm build:content` to process the new file.
+
+See [Add a New Docs Page](/docs/guides/add-docs-page) for a full walkthrough.
+
+## Where can I get help?
+
+- [Installation guide](/docs/getting-started/installation) — detailed setup and troubleshooting
+- [GitHub Issues](https://github.com/nextellarlabs/nextellar/issues) — report bugs
+- [GitHub Discussions](https://github.com/nextellarlabs/nextellar/discussions) — ask questions

@@ -20,7 +20,7 @@ The `useTransactionHistory` hook fetches and paginates transaction history for S
 ```tsx
 import { useTransactionHistory } from '@/hooks/useTransactionHistory';
 
-export default function TransactionList() {
+export default function TransactionHistoryList() {
   const { transactions, loading, loadMore, hasMore } =
     useTransactionHistory('GABC123...');
 
@@ -38,13 +38,13 @@ export default function TransactionList() {
     </div>
   );
 }
-```text
+```
 
 ## API Reference
 
 ### Parameters
 
-```typescript
+````typescript
 useTransactionHistory(
   publicKey: string,
   options?: {
@@ -73,13 +73,13 @@ interface TransactionHistoryState {
   hasMore: boolean;
   refresh: () => Promise<void>;
 }
-```text
+````
 
 ## Examples
 
 ### Filter by Date Range
 
-```tsx
+````tsx
 const { transactions } = useTransactionHistory(publicKey);
 
 const recentTxs = transactions.filter((tx) => {
@@ -100,7 +100,7 @@ const paymentTxs = transactions.filter((tx) =>
 ### Infinite Scroll
 
 ```tsx
-function InfiniteTransactionList() {
+function InfiniteTransactionHistory() {
   const { transactions, loadMore, hasMore } = useTransactionHistory(publicKey);
 
   useEffect(() => {
@@ -119,7 +119,32 @@ function InfiniteTransactionList() {
 
   return <div>{/* render transactions */}</div>;
 }
-```text
+````
+
+## Error Handling
+
+### Empty History
+
+A brand-new account can legitimately have no transactions yet. Render an empty state instead of a failure message.
+
+### Cursor Failures
+
+If pagination cursors become invalid, reset the cursor state and reload the first page.
+
+### Timeouts and Rate Limits
+
+Keep the current list visible while retrying the next request, and surface a retry button for transient failures.
+
+```tsx
+if (error) {
+  return (
+    <div>
+      <p>Unable to load history right now.</p>
+      <button onClick={refresh}>Retry</button>
+    </div>
+  );
+}
+```
 
 ## Best Practices
 

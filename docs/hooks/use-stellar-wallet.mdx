@@ -18,7 +18,7 @@ The `useStellarWallet` hook provides a complete solution for connecting to Stell
 
 ## Basic Usage
 
-```tsx
+````tsx
 import { useStellarWallet } from '@/hooks/useStellarWallet';
 
 export default function WalletDemo() {
@@ -325,6 +325,8 @@ function AccountStatus() {
 
 ## Error Handling
 
+For shared recovery patterns across hooks, see [Hook Error Handling](/docs/guides/hook-error-handling).
+
 ### Connection Errors
 
 ```tsx
@@ -556,3 +558,4 @@ await refreshBalances();
 <p className="text-sm text-center text-muted-foreground mt-8">
   <a href="#"> Back to top</a>
 </p>
+````

@@ -19,8 +19,8 @@ The repository test configuration includes:
 ### Vitest configuration
 
 ```ts
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
@@ -28,15 +28,15 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
   },
-})
+});
 ```
 
 ### What this setup does
 
-- Runs unit tests in a DOM-compatible environment
-- Provides global helpers like `describe`, `it`, `expect`, and `vi`
-- Resolves imports with Vite-style path aliases
-- Supports testing React components and hooks
+- Runs unit tests in a DOM-compatible environment.
+- Provides global helpers like `describe`, `it`, `expect`, and `vi`.
+- Resolves imports with Vite-style path aliases.
+- Supports testing React components and hooks.
 
 ## Running tests
 
@@ -83,3 +83,7 @@ pnpm exec vitest run --coverage
 - Add new tests alongside related code with filenames such as `*.test.ts`, `*.test.tsx`, or `*.spec.ts`.
 - Keep tests focused on React hooks, component behavior, and utility functions.
 - For documentation contribution guidance, see [Contributing to Documentation](/docs/guides/contributing).
+
+## Next Steps
+
+For mocking external API calls (like Stellar Horizon), see [Testing with MSW](/docs/integrations/testing) for Mock Service Worker setup.
