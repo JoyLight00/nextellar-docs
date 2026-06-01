@@ -13,7 +13,7 @@ Horizon is Stellar's HTTP API server that provides a RESTful interface to the St
 
 - Query account balances and details
 - Submit transactions
-- Fetch transaction history
+- Fetch transaction history.
 - Query the order book (DEX)
 - Stream real-time updates
 
@@ -45,7 +45,7 @@ Nextellar hooks default to Stellar's public Horizon servers:
 
 Configure once at the provider level:
 
-```tsx
+````tsx
 <WalletProvider horizonUrl="https://horizon.stellar.org">
   <App /> {/* All hooks use mainnet Horizon */}
 </WalletProvider>
@@ -178,3 +178,4 @@ const { balances } = useStellarBalances(publicKey, {
 - [useStellarBalances](/docs/hooks/use-stellar-balances) - Balance fetching hook
 - [useStellarPayment](/docs/hooks/use-stellar-payment) - Payment transactions
 - [useTransactionHistory](/docs/hooks/use-transaction-history) - Transaction queries
+````
