@@ -213,6 +213,43 @@ nextellar doctor --json
 
 The command exits with code `0` when all required checks pass, or `1` when one or more required checks fail. Optional check failures are reported but do not affect the exit code.
 
+### nextellar telemetry
+
+Manage anonymous telemetry settings for the local environment.
+
+```bash
+nextellar telemetry <action>
+```
+
+**Arguments:**
+
+| Argument | Type   | Required | Description                                  |
+| -------- | ------ | -------- | -------------------------------------------- |
+| `action` | string | Yes      | One of `status`, `enable`, or `disable`      |
+
+**Actions:**
+
+| Action    | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| `status`  | Show whether telemetry is enabled and where the config is stored   |
+| `enable`  | Enable anonymous telemetry and save the preference locally         |
+| `disable` | Disable anonymous telemetry and save the preference locally        |
+
+**Examples:**
+
+```bash
+# Check the current telemetry setting
+nextellar telemetry status
+
+# Enable telemetry
+nextellar telemetry enable
+
+# Disable telemetry
+nextellar telemetry disable
+```
+
+If `NEXTELLAR_TELEMETRY_DISABLED` is set, the status output reports that telemetry is forced off for the current environment.
+
 ### nextellar deploy
 
 Validate and prepare your project for production deployment. This command checks that your Horizon and Soroban RPC endpoints are properly configured, and builds a optimized production bundle of your Stellar dApp.
