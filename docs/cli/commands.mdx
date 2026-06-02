@@ -213,6 +213,36 @@ nextellar doctor --json
 
 The command exits with code `0` when all required checks pass, or `1` when one or more required checks fail. Optional check failures are reported but do not affect the exit code.
 
+### nextellar upgrade
+
+Upgrade an existing Nextellar project to the latest template files.
+
+```bash
+nextellar upgrade [options]
+```
+
+Run this command from the root of an existing Nextellar project. Use a dry run first to review the files that would change, then run the upgrade when you are ready to apply updates.
+
+**Options:**
+
+| Option      | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| `--dry-run` | Show what would change without applying the upgrade   |
+| `--yes`     | Apply changes without prompting for confirmation      |
+
+**Examples:**
+
+```bash
+# Preview upgrade changes
+nextellar upgrade --dry-run
+
+# Apply the upgrade interactively
+nextellar upgrade
+
+# Apply the upgrade without prompting
+nextellar upgrade --yes
+```
+
 ### nextellar deploy
 
 Validate and prepare your project for production deployment. This command checks that your Horizon and Soroban RPC endpoints are properly configured, and builds a optimized production bundle of your Stellar dApp.
