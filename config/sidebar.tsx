@@ -129,6 +129,18 @@ export const sidebarNav: SidebarSection[] = [
         href: '/docs/guides/mdx-custom-components',
       },
       { title: 'Link Validation', href: '/docs/guides/link-validation' },
+      {
+        title: 'Optimizing Transaction Sizes',
+        href: '/docs/guides/optimizing-transaction-sizes',
+      },
+      {
+        title: 'Transaction Batching',
+        href: '/docs/guides/transaction-batching',
+      },
+      {
+        title: 'Rate Limiting Horizon Requests',
+        href: '/docs/guides/rate-limiting-horizon-requests',
+      },
     ],
   },
   {
@@ -220,6 +232,18 @@ export const sidebarNav: SidebarSection[] = [
         href: '/docs/guides/mdx-custom-components',
       },
       { title: 'Link Validation', href: '/docs/guides/link-validation' },
+      {
+        title: 'Optimizing Transaction Sizes',
+        href: '/docs/guides/optimizing-transaction-sizes',
+      },
+      {
+        title: 'Transaction Batching',
+        href: '/docs/guides/transaction-batching',
+      },
+      {
+        title: 'Rate Limiting Horizon Requests',
+        href: '/docs/guides/rate-limiting-horizon-requests',
+      },
     ],
   },
   {
